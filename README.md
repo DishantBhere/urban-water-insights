@@ -5,7 +5,12 @@ Urban Water Insights is a **hackathon prototype** that demonstrates how **urban 
 The project allows users to adjust environmental and socio-economic parameters and instantly view their impact on future water demand, along with alerts and recommendations.
 
 ---
-## Live 
+ 
+### 🌐 Live Demo
+
+The deployed version of the project is available **[here](https://urban-water-insights.vercel.app/)**.
+
+
 
 ## 🎯 Hackathon Objective
 
