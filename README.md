@@ -5,6 +5,7 @@ Urban Water Insights is a **hackathon prototype** that demonstrates how **urban 
 The project allows users to adjust environmental and socio-economic parameters and instantly view their impact on future water demand, along with alerts and recommendations.
 
 ---
+## Live 
 
 ## 🎯 Hackathon Objective
 
@@ -20,7 +21,9 @@ To build a working system that:
 
 
 <img width="1600" height="729" alt="image" src="https://github.com/user-attachments/assets/a5a2e645-dd0f-4829-9ab1-c48e944fe5e3" />
-
+<img width="1600" height="721" alt="image" src="https://github.com/user-attachments/assets/0703c399-ee82-4cc3-8542-407b1a6fc92a" />
+<img width="1600" height="723" alt="image" src="https://github.com/user-attachments/assets/34363661-8938-4930-9480-bff8ff595bd5" />
+<img width="1600" height="722" alt="image" src="https://github.com/user-attachments/assets/9ca4e731-5623-4469-aa97-c3317a08dddf" />
 
 
 
