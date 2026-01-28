@@ -2,13 +2,26 @@ import { useNavigate } from 'react-router-dom';
 import { Droplets, LineChart, Map, FileText, Volume2, Zap, Bell, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import StatusBadge from '@/components/shared/StatusBadge';
+import LiveDataFeed from '@/components/shared/LiveDataFeed';
+import NotificationPanel from '@/components/shared/NotificationPanel';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { speakText } from '@/lib/api';
 import { speechLanguageCodes } from '@/lib/i18n';
+import { useWebSocket } from '@/hooks/useWebSocket';
 
 const Home = () => {
   const navigate = useNavigate();
   const { t, language } = useLanguage();
+  const {
+    isConnected,
+    connectionStatus,
+    liveData,
+    notifications,
+    currentDemand,
+    connect,
+    disconnect,
+    clearNotifications,
+  } = useWebSocket();
 
   const features = [
     {
@@ -107,6 +120,34 @@ const Home = () => {
                 {t('speakAlerts')}
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-time Data Section */}
+      <section className="py-16 relative border-t border-border">
+        <div className="absolute inset-0 gradient-radial opacity-50" />
+        <div className="container relative mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Real-Time Monitoring</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Live water demand data and system notifications streaming in real-time
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <LiveDataFeed
+              isConnected={isConnected}
+              connectionStatus={connectionStatus}
+              liveData={liveData}
+              currentDemand={currentDemand}
+              onConnect={connect}
+              onDisconnect={disconnect}
+            />
+            <NotificationPanel
+              notifications={notifications}
+              onClear={clearNotifications}
+            />
           </div>
         </div>
       </section>
