@@ -19,8 +19,7 @@ To build a working system that:
 
 
 
-
-
+<img width="1600" height="729" alt="image" src="https://github.com/user-attachments/assets/a5a2e645-dd0f-4829-9ab1-c48e944fe5e3" />
 
 
 
